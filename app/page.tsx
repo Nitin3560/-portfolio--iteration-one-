@@ -28,8 +28,10 @@ export default function HomePage() {
         }
 
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
+        html { scroll-behavior: smooth; background: var(--bg); }
         body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+        #__next, main, [data-nextjs-scroll-focus-boundary] { background: var(--bg); }
+        div { background: inherit; }
 
         nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 3rem; height: 56px; border-bottom: 1px solid var(--border); background: rgba(244,241,235,0.92); backdrop-filter: blur(12px); }
         .nav-name { font-family: var(--serif); font-size: 15px; font-weight: 400; color: var(--ink); text-decoration: none; font-style: italic; }
@@ -39,7 +41,7 @@ export default function HomePage() {
         .nav-contact { font-family: var(--mono); font-size: 11px; color: var(--accent); text-decoration: none; letter-spacing: 0.06em; border-bottom: 1px solid var(--accent); padding-bottom: 1px; transition: opacity 0.2s; }
         .nav-contact:hover { opacity: 0.7; }
 
-        .hero { padding: 130px 3rem 80px; display: grid; grid-template-columns: 1fr 340px; gap: 5rem; align-items: center; border-bottom: 1px solid var(--border); max-width: 1200px; margin: 0 auto; }
+        .hero { padding: 130px 3rem 80px; display: grid; grid-template-columns: 1fr 340px; gap: 5rem; align-items: center; border-bottom: 1px solid var(--border); max-width: 1200px; margin: 0 auto; background: var(--bg); }
         .hero-eyebrow { font-family: var(--mono); font-size: 11px; color: var(--ink3); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.8rem; animation: fadeUp 0.6s ease both; }
         .hero-name { font-family: var(--serif); font-size: clamp(4rem, 9vw, 8rem); font-weight: 900; line-height: 0.9; letter-spacing: -0.03em; color: var(--ink); margin-bottom: 2.2rem; animation: fadeUp 0.7s 0.05s ease both; }
         .hero-name em { font-style: italic; font-weight: 300; color: var(--ink2); }
@@ -53,7 +55,7 @@ export default function HomePage() {
         @keyframes float { 0%, 100% { transform: translateY(0px) rotate(-1deg); } 50% { transform: translateY(-12px) rotate(1deg); } }
         .drone-group { animation: float 4s ease-in-out infinite; transform-origin: center; }
 
-        .section { max-width: 1200px; margin: 0 auto; padding: 80px 3rem; border-bottom: 1px solid var(--border); }
+        .section { max-width: 1200px; margin: 0 auto; padding: 80px 3rem; border-bottom: 1px solid var(--border); background: var(--bg); }
         .section-header { display: grid; grid-template-columns: 140px 1fr; gap: 3rem; margin-bottom: 3rem; align-items: baseline; }
         .section-num { font-family: var(--mono); font-size: 11px; color: var(--ink3); letter-spacing: 0.1em; }
         .section-title { font-family: var(--serif); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; color: var(--ink); }
@@ -133,7 +135,7 @@ export default function HomePage() {
         .exp-bullets li::before { content: ''; position: absolute; left: 0; top: 0.7em; width: 5px; height: 1px; background: var(--ink3); }
         .exp-bullets li strong { color: var(--ink); font-weight: 600; }
 
-        .contact-wrap { max-width: 1200px; margin: 0 auto; padding: 80px 3rem; display: grid; grid-template-columns: 140px 1fr; gap: 3rem; }
+        .contact-wrap { max-width: 1200px; margin: 0 auto; padding: 80px 3rem; display: grid; grid-template-columns: 140px 1fr; gap: 3rem; background: var(--bg); }
         .contact-body { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; }
         .contact-heading { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 1.2rem; }
         .contact-heading em { font-style: italic; font-weight: 300; color: var(--ink2); }
@@ -145,7 +147,7 @@ export default function HomePage() {
         .contact-socials a { font-family: var(--mono); font-size: 11px; color: var(--ink3); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
         .contact-socials a:hover { color: var(--ink); }
 
-        .footer { border-top: 1px solid var(--border); padding: 1.5rem 3rem; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; }
+        .footer { border-top: 1px solid var(--border); padding: 1.5rem 3rem; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; background: var(--bg); }
         .footer-text { font-family: var(--mono); font-size: 11px; color: var(--ink3); letter-spacing: 0.06em; }
 
         .pub-list { display: flex; flex-direction: column; }
